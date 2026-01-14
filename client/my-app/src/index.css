@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  outline: none;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-weight: 400;
+  background-color: #fff;
+  font-family: "SF Pro Display", sans-serif;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+a,
+span {
+  font-weight: 400;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/*  */
+
+.d_btn {
+  background: #309689;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  padding: 4px 10px;
+}
+.t_btn {
+  background: none;
+}
+.d_btn:hover {
+  background: none;
+}
+.t_btn:hover {
+  background: #309689;
+  
+}
+/*  */
+.main_padding{
+  padding: 60px 0;
+}
+.links {
+  text-decoration: none;
+}

@@ -1,0 +1,21 @@
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10px;
+  border-bottom: 1px solid;
+  background: #000;
+}
+.Header .header_logo_Wrap .links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.Header .header_logo_Wrap .header_logo_text {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+}
+.Header .header_side .t_btn {
+  margin-right: 8px;
+}
