@@ -1,0 +1,18 @@
+name: Deploy
+
+on:
+  push:
+    branches: ["main"]
+
+
+jobs:
+  deploy: #u can name it whatever we like
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build . -t soban11776/myfirstdeploy
+      - run: echo  "${{secrets.DOCKER_HUB_PASSWORD}}" | docker login -u ${{secrets.DOCKER_HUB_USERNAME}} --password-stdin
+      - run: docker push soban11776/myfirstdeploy:latest
+
+
