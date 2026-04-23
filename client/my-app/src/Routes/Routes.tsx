@@ -16,7 +16,7 @@
 
 // export default AppRoutes;
 
-import React from "react";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { RouteList } from "./RouteList";
 

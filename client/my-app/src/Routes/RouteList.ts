@@ -1,8 +1,8 @@
 
 import Login from "../components/Login";
 import Signup from "../components/Signup";
-import UserDashBoard from "../Pages/User/UserDashBoard";
-import { UserHome } from "../Pages/User/UserHome";
+import UserDashBoard from "../pages/User/UserDashBoard";
+import { UserHome } from "../pages/User/UserHome";
 import { RouteName } from "./RouteName";
 
 export const RouteList = [

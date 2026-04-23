@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: backend
+  name: jobportal-backend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: job-portal-container
+        image: soban11776/jobportal-server:v2
+        ports:
+        - containerPort: 80
+        envFrom:            # Pulls all keys from your secret as ENV variables
+        - secretRef:
+            name: jobportal-secret
+        resources:          # Moved back to the container level
+          requests:
+            memory: "128Mi"
+            cpu: "250m"
+          limits:
+            memory: "256Mi"
+            cpu: "500m"

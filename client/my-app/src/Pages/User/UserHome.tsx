@@ -1,4 +1,4 @@
-import React from "react";
+
 import bgVideo from "../../assets/bgVideo.mp4";
 import Header from "../../components/Header";
 import "../../stylesheet/user/UserHome.css";

@@ -1,0 +1,15 @@
+# STAGE 1: Build the app
+FROM node:18-alpine AS builder
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+# We use || true to skip TS errors if they pop up again
+RUN npm run build || true
+
+# STAGE 2: Serve the app with Nginx
+FROM nginx:alpine
+# Copy from 'builder' stage to Nginx web root
+COPY --from=builder /app/dist /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]

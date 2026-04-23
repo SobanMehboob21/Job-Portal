@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jobportal-frontend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: frontend-container
+        image: soban11776/jobportal-frontend:v1
+        ports:                # <--- This must have 8 spaces from the left
+        - containerPort: 3000 # <--- This must have 10 spaces from the left
